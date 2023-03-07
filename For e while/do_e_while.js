@@ -1,14 +1,12 @@
 
 function contar(){
-    var contador = document.getElementById("cont1")
-    var contagem = document.getElementById("contagem")
-
-    var cont = Number(contador.value)
- 
+    const resultado = `Passo: ${contador}`
+    var contador = Number(document.getElementById("cont1").value)
+    var terminador = Number(document.getElementById("cont2").value)
 
     do {
-    contagem.innerHTML= `passo:${cont}`
-         cont++
-    } while (cont <= 10);
+        document.getElementById("contagem").innerHTML = resultado
+         contador++
+    } while (contador <= terminador);
     window.alert("terminado!!")
 }
