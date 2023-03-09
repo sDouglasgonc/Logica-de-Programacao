@@ -13,11 +13,11 @@ count++;
     }else{
         count = 0;
     }if(count > 0){
-value.styles.color = "green"
-    }if(count<0){
-value.styles.color = "red"
+value.style.color = "green"
+    }if(count < 0){
+value.style.color = "red"
     }if(count === 0){
-value.styles.color = "#222"
+value.style.color = "black"
     }
     value.textContent = count
 })

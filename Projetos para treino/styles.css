@@ -1,0 +1,35 @@
+body{
+    background-color:  #f3f3f3;
+}
+
+.container{
+display: block;
+margin-left: 350px;
+margin-top: 190px;
+align-items: center;
+font-family: 'Fira Sans', sans-serif;
+}
+h1{
+padding-left: 1em;
+font-size: 60px;
+margin-left: 55px;
+}
+span{
+margin-left: 220px;
+font-size: 70px;
+}
+.btn{
+width: 150px;
+padding: 8px;
+margin: 6px;
+margin-top: 20px;
+color: white;
+border-radius: 15px;
+transition: all 0.4s linear;
+background-color: black;
+font-size: 18px;
+}
+.btn:hover{
+    background-color: rgb(128, 128, 128);
+    transition: all 0.4s linear;
+}
