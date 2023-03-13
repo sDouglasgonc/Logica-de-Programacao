@@ -14,18 +14,24 @@ body{
 background: #f2f2f2;
 box-shadow:  15px 15px 47px #616161,
  -15px -15px 47px #ffffff;
- height: auto;
+ height: 550px;
  width: 400px;
+ margin-bottom: 40px;
 }
 .img-container{
     display: flex;
     justify-content: center;
     
+    
 }
-#jovem-img{
+#person-img{
   width: 190px;
   border-radius: 200px;
   margin-top: 15px;
+  background: #e0e0e0;
+box-shadow:  5px -5px 0px #f2D6A2,
+             -5px 5px 0px #f3f3f3
+
 }
 
 .title{
@@ -34,7 +40,7 @@ box-shadow:  15px 15px 47px #616161,
   justify-content: center;
   
 }
-#autor{
+#author{
   text-align: center;
 }
 #job{
@@ -44,5 +50,25 @@ box-shadow:  15px 15px 47px #616161,
 }
 #info{
   text-align: center;
-  margin-bottom: 23px;
+  margin-bottom: 14px;
+}
+.button-container{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+margin-right: 137px;
+margin-left: 137px;
+}
+.prev-btn,.next-btn{
+  border-color: rgb(110, 255, 255);
+}
+.random-btn{
+display: flex;
+justify-content: center;
+align-items: center;
+margin: auto;
+border-color: rgb(110, 255, 255);
+color: rgb(4, 167, 167);
+
 }
