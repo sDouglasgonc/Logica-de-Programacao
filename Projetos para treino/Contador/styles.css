@@ -1,12 +1,13 @@
 body{
     background-color:  #f3f3f3;
+    position: relative;
 }
 
 .container{
-display: block;
-margin-left: 350px;
-margin-top: 190px;
-align-items: center;
+    position: absolute;
+    margin-top: 100px;
+    left: 30%;
+    
 font-family: 'Fira Sans', sans-serif;
 }
 h1{
