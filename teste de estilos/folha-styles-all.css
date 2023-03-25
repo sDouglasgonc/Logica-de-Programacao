@@ -43,7 +43,8 @@ li{
 .links a:hover{
     background: hsl(206, 73%, 78%);
     color: aquamarine;
-    padding-left: 1.5rem;
+    padding-left: 2rem;
+    
 }
 .social-icons{
     display: none;
@@ -53,9 +54,8 @@ li{
     height: 0;
     overflow: hidden;
     transition: all 0.3s linear;
-}
-.show-links{
     height: 10rem;
+
 }
 img{
   height: 100px;
