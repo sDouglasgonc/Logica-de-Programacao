@@ -39,7 +39,7 @@ window.addEventListener("scroll", function(){
     toplink.classList.add("show-link")
     }
     else{
-    toplink.classList.add("show-link")
+    toplink.classList.remove("show-link")
     }
 })
 
@@ -61,6 +61,13 @@ link.addEventListener("click", function(e){
     .height
     const fixedNav = navbar.classList.contains("fixed-nav")
     let position = element.offsetTop - navHeight;
+
+    if(!fixedNav){
+        position = position - navHeight
+    }
+    if(navHeight > 82){
+        position = position + containerHeight
+    }
     window.scrollTo({
         left: 0,
         top: position
