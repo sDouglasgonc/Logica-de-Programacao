@@ -10,7 +10,7 @@ const menu = [
     {
         id:2,
         title:"X salada",
-        category:"Cafe da Manha",
+        category:"CafedaManha",
         price: 12.00,
         img:"./imagens/Xsalada.jpg",
         desc:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni alias eveniet fuga impedit ut ipsum corrupti sed provident sit praesentium!"  
@@ -26,7 +26,7 @@ const menu = [
      {
         id:4,
         title:"Misto quente",
-        category:"Cafe da Manha",
+        category:"CafedaManha",
         price: 3.00,
         img:"./imagens/misto.jpg",
         desc:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni alias eveniet fuga impedit ut ipsum corrupti sed provident sit praesentium!"  
@@ -50,7 +50,7 @@ const menu = [
      {
         id:7,
         title:"Tapioca de charque",
-        category:"Cafe da Manha",
+        category:"CafedaManha",
         price: 7.00,
         img:"./imagens/TapiocaCharque.jpg",
         desc:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni alias eveniet fuga impedit ut ipsum corrupti sed provident sit praesentium!"  
@@ -120,7 +120,7 @@ function displayMenuButtons(){
             }
             return values
     },
-    ["all",]
+    ["todos",]
     )
     const categoryBtns = categories.map(function(category){
 return ` <button class="filter-btn" type="button"
@@ -141,7 +141,7 @@ filterBtns.forEach(function(btn){
         }
     })
     //console.log(menuCategory)
-    if(category === "all"){
+    if(category === "todos"){
 displayMenuItems(menu)
     }else{
         displayMenuItems(menuCategory)
