@@ -27,6 +27,13 @@ h1{
     font-size: 40px;
     font-family: 'Rubik', sans-serif;
 }
+.loading {
+  font-size: 20px;
+    font-family: 'Rubik', sans-serif; 
+}
+.hide{
+  display: none
+}
 .links a{
     color: gray;
     font-size: 1rem;
