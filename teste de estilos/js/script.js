@@ -3,19 +3,19 @@ const url = "https://jsonplaceholder.typicode.com/posts";
 const loadingElement = document.querySelector("#loading");
 const postsContainer = document.querySelector("#posts-container");
 
-const postPage = document.querySelector("#post");
-const postContainer = document.querySelector("#post-container");
-const commentsContainer = document.querySelector("#comments-container");
+const postPage = document.querySelector("#post")
+const postContainer = document.querySelector("#post-container")
+const commentsContainer = document.querySelector("#comments-container")
 
-const commentForm = document.querySelector("#comment-form");
-const emailInput = document.querySelector("#email");
-const bodyInput = document.querySelector("#body");
+const  commentForm = document.querySelector("#comment-form")
+const  emailInput = document.querySelector("#email")
+const  bodyInput = document.querySelector("#body")
 
-// Load post
+// Pegar id da URL
 const urlSearchParams = new URLSearchParams(window.location.search);
 const postId = urlSearchParams.get("id");
 
-// Get all posts
+// pegar todos os posts
 async function getAllPosts() {
   const response = await fetch(url);
 
@@ -41,81 +41,83 @@ async function getAllPosts() {
     div.appendChild(title);
     div.appendChild(body);
     div.appendChild(link);
+
     postsContainer.appendChild(div);
   });
 }
+// pegar os posts individuais
 
-// Get individual post
-async function getPost(id) {
-  const [responsePost, responseComments] = await Promise.all([
-    fetch(`${url}/${id}`),
-    fetch(`${url}/${id}/comments`),
-  ]);
+async function getPost(id){
+const [responsePost, responseComments] = await Promise.all([
+  fetch(`${url}/${id}`),
+  fetch(`${url}/${id}/comments`)
 
-  const dataPost = await responsePost.json();
+])
 
-  const dataComments = await responseComments.json();
+const dataPost = await responsePost.json()
 
-  loadingElement.classList.add("hide");
-  postPage.classList.remove("hide");
+const dataComments = await responseComments.json()
 
-  const title = document.createElement("h1");
-  const body = document.createElement("p");
+loadingElement.classList.add("hide")
+postPage.classList.remove("hide")
 
-  title.innerText = dataPost.title;
-  body.innerText = dataPost.body;
+const title = document.createElement("h1")
+const body = document.createElement("p")
 
-  postContainer.appendChild(title);
-  postContainer.appendChild(body);
+title.innerText = dataPost.title
+body.innerText = dataPost.body
 
-  dataComments.map((comment) => {
-    createComment(comment);
-  });
+postContainer.appendChild(title)
+postContainer.appendChild(body)
+
+dataComments.map((comment)=>{
+createComment(comment)
+})
 }
 
-function createComment(comment) {
-  const div = document.createElement("div");
-  const email = document.createElement("h3");
-  const commentBody = document.createElement("p");
+function createComment(comment){
+  const div = document.createElement("div")
+  const email = document.createElement("h3")
+  const commentbody = document.createElement("p")
 
-  email.innerText = comment.email;
-  commentBody.innerText = comment.body;
+  email.innerText = comment.email
+  commentbody.innerText = comment.body
 
-  div.appendChild(email);
-  div.appendChild(commentBody);
-  commentsContainer.appendChild(div);
+  div.appendChild(email)
+  div.appendChild(commentbody)
+
+  commentsContainer.appendChild(div)
 }
 
-// Insert a comment
-async function postComment(comment) {
-  const response = await fetch(url, {
-    method: "POST",
+//comentario do post 
+async function postComment(comment){
+  const response = await fetch(`${url}/${postId}/comments`,{
+    method:"POST",
     body: comment,
     headers: {
-      "Content-type": "application/json",
-    },
-  });
-
-  const data = await response.json();
-
-  createComment(data);
+"Content-type": "application/json"
+    }
+  })
+  const data = await response.json()
+  createComment(data)
 }
+
 
 if (!postId) {
   getAllPosts();
 } else {
-  getPost(postId);
-
+  getPost(postId)
+  //adicionar elementos do comment form
   commentForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     let comment = {
-      email: emailInput.value,
-      body: bodyInput.value,
-    };
+      email:emailInput.value,
+      body: bodyInput.value
+    }
 
-    comment = JSON.stringify(comment);
+   comment = JSON.stringify(comment)
 
-    postComment(comment);
-  });
+   postComment(comment)
+  })
 }
