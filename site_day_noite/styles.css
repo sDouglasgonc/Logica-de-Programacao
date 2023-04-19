@@ -19,7 +19,7 @@
   justify-content: space-around;
   border: none;
   transition: all 0.5s;
-  background-color: rgba(3, 3, 85, 0.712);
+  background-color: #086397;
 }
 .switch-btn span {
   display: inline-block;
@@ -34,27 +34,33 @@
   height: 100px;
   top: 0;
   left: 0;
-  background: gray;
+  background: #222;
   border-radius: 400px;
   margin: 0;
   display: block;
   transition: all 0.5s;
 }
+.img-container{
+  background: url("./lua.jpg") center;
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+.day{
+  background: url("./sol.jpg") center;
+}
 .slide .switch {
   left: 50%;
 }
 .change-color{
-  background-color: rgba(149, 151, 6, 0.712);
+  background-color: #fdb63b;
 }
-.night{
-  min-height: 100vh;
-  background: url("./lua.jpg") center/cover no-repeat;
-  display: grid;
-  place-items: center;
-}
-.day{
-background: url("./sol.jpg");
-}
+
+
 /* header after*/
 header::after {
   content: "";
@@ -63,6 +69,13 @@ header::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgb(0, 0, 0);
+  background: rgb(255, 254, 254);
   z-index: -1;
+}
+
+@media (max-width:517px){
+  .img-container{
+margin-right: 0 auto;
+
+  }
 }

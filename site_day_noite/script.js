@@ -1,14 +1,13 @@
 const btn = document.querySelector(".change-btn")
-const change = document.querySelector(".switch")
-const day = document.querySelector(".night")
+const changeImg = document.querySelector(".img-container")
 
 document.addEventListener("click", () => {
     if(!btn.classList.contains("slide")){
 btn.classList.add("slide","change-color")
-day.classList.add("day")
+changeImg.classList.add("day")
     }
     else{
-        day.classList.remove("day")
+        changeImg.classList.remove("day")
         btn.classList.remove("slide","change-color")
     }
 })
