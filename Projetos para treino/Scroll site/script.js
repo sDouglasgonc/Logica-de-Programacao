@@ -8,6 +8,27 @@ const navToggle = document.querySelector(".nav-toggle")
 const linksContainer = document.querySelector(".links-container")
 const links = document.querySelector(".links")
 
+// ******* ABOUT PAGE **********
+const btns = document.querySelectorAll(".tab-btn")
+const about = document.querySelector(".about")
+const articles = document.querySelectorAll(".content")
+
+about.addEventListener("click", function(e){
+    const id = e.target.dataset.id
+    if(id){
+    //remover o active dos outros botões
+    btns.forEach(function(btn){
+        btn.classList.remove("active")
+        e.target.classList.add("active")
+    })
+    articles.forEach(function(article){
+        article.classList.remove("active")
+    })
+    const element = document.getElementById(id)
+    element.classList.add("active")
+    }
+    })
+
 navToggle.addEventListener("click", function(){
    // linksContainer.classList.toggle("show-links")
    const containerHeight = linksContainer.getBoundingClientRect().height;
