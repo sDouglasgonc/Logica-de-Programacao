@@ -301,7 +301,7 @@ nav {
 /* hero */
 header {
   min-height: 100vh;
-  background: linear-gradient(rgba(255, 255, 255, 0.212), rgba(0, 0, 0, 0.7)),
+  background: linear-gradient(#ffffff36, #000000b3),
     url(./road.jpg) center/cover no-repeat;
 }
 .banner {
