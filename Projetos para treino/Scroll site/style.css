@@ -245,7 +245,7 @@ nav {
   .links a:hover {
     color: var(--clr-white);
   }
-  /*
+  
 }
  hero 
 header {
@@ -260,11 +260,11 @@ header {
   text-align: center;
 }
 .container h1 {
-  color: var(--clr-white);
+  color: black;
   text-transform: uppercase;
 }
 .container p {
-  color: var(--clr-white);
+  color: black;
   max-width: 25rem;
   margin: 0 auto;
   margin-bottom: 1.25rem;
@@ -274,22 +274,7 @@ header {
     max-width: 40rem;
   }
 }
- sections and title 
-.title h2 {
-  text-align: center;
-  text-transform: uppercase;
-}
-.title span {
-  color: var(--clr-secondary);
-}
-#about,
-#services,
-#tours {
-  height: 80vh;
-}
-#services {
-  background: var(--clr-white);
-}
+
 footer {
   background: var(--clr-grey-1);
   padding: 5rem 1rem;
@@ -302,26 +287,7 @@ footer p {
   margin-bottom: 0;
 }
 
-.top-link {
-  font-size: 1.25rem;
-  position: fixed;
-  bottom: 3rem;
-  right: 3rem;
-  background: var(--clr-secondary);
-  width: 2rem;
-  height: 2rem;
-  display: grid;
-  place-items: center;
-  border-radius: var(--radius);
-  color: var(--clr-white);
-  animation: bounce 2s ease-in-out infinite;
-  visibility: hidden;
-  z-index: -100;
-}
-.show-link {
-  visibility: visible;
-  z-index: 100;
-}
+
 
 .btn {
   text-transform: uppercase;
@@ -341,16 +307,8 @@ footer p {
   color: var(--clr-white);
   background: var(--clr-black);
 }
- section 
-.section {
-  padding: 5rem 0;
-}
 
-.section-center {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1170px;
-}
+
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
@@ -361,7 +319,7 @@ main {
   display: grid;
   place-items: center;
 }
-
+/*
 =============== 
 About
 ===============
