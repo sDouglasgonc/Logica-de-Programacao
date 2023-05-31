@@ -10,13 +10,13 @@ body{
 }
 .review{
   position: relative;
-    border-radius: 16px;
-background: #f2f2f2;
-box-shadow:  15px 15px 47px #616161,
- -15px -15px 47px #ffffff;
- height: 550px;
- width: 400px;
- margin-bottom: 40px;
+  border-radius: 16px;
+  background: #f2f2f2;
+  box-shadow:  15px 15px 47px #616161,
+  -15px -15px 47px #ffffff;
+  height: 550px;
+  width: 400px;
+  margin-bottom: 40px;
 }
 .img-container{
     display: flex;
