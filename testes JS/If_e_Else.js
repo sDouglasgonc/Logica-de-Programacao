@@ -1,4 +1,2 @@
-do {
-    i += 1;
-    console.log(i);
-} while (i < 5);
+var n = -23
+console.log(Math.sign(n))
